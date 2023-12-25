@@ -3,8 +3,6 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-COPY display_name.sh /app/
+RUN echo "hello" >> display_name
 
-RUN chmod +x display_name.sh
-
-CMD ["sh", "display_name.sh"]
+CMD cat display_name
